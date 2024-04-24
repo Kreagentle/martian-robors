@@ -1,0 +1,8 @@
+# Ignore .idea directories
+.idea/
+
+# Ignore binary files
+*.exe
+*.dll
+*.so
+*.dylib
