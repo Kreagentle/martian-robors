@@ -43,14 +43,13 @@ func Execute() error {
 			return err
 		}
 
-		fmt.Printf("Robot route №%d: ", robotCount)
+		fmt.Printf("Robot route #%d: ", robotCount)
 		path, err = reader.ReadString('\n')
 		if err != nil {
 			fmt.Println("Error reading input(incorrect input):", err)
 			return err
 		}
 		newRobot.WalkPath = []rune(path)
-
 		newRobot.RobotWalk(0)
 
 		if newRobot.Lost {
@@ -64,10 +63,12 @@ func Execute() error {
 
 		var continueInput string
 		fmt.Print("Do you want to continue adding robots? (yes/no): ")
-		_, err = fmt.Scan(&continueInput)
+		continueInput, err = reader.ReadString('\n')
 		if err != nil {
+			fmt.Println("Error reading input(incorrect input):", err)
 			return err
 		}
+
 		if continueInput != "yes" {
 			break
 		}

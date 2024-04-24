@@ -45,12 +45,12 @@ func ParseRobot(input string) (int, int, int, error) {
 
 	runeInput := []rune(parts[2])
 	if len(runeInput) != 1 {
-		return 0, 0, 0, fmt.Errorf("invalid rune input: expected a single rune")
+		return 0, 0, 0, fmt.Errorf("invalid rune input: expected a single valid (N, E, W, S) rune")
 	}
 	char := runeInput[0]
 
 	if _, ok := AngleMap[char]; !ok {
-		return 0, 0, 0, fmt.Errorf("invalid rune input: expected a single rune")
+		return 0, 0, 0, fmt.Errorf("invalid rune input: expected a single valid (N, E, W, S) rune")
 	}
 
 	return num1, num2, AngleMap[char].(int), nil

@@ -5,6 +5,12 @@ Requires go 1.22.
 go run main.go
 ```
 
+## Run tests
+
+```
+go test ./...
+```
+
 ## Description 
 
 Develop a program to track the movement of robots on a rectangular grid, representing the surface of Mars. The program must interpret instructions sent from Earth and report the final position of each robot.
