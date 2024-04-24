@@ -8,7 +8,7 @@ go run main.go
 ## Run tests
 
 ```
-go test ./...
+go test -v ./...
 ```
 
 ## Description 
